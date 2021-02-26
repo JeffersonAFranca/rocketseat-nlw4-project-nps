@@ -102,3 +102,33 @@ AULA 2  - Preparação do ambiente para acesso ao banco de dados
 - Instalação dependencia "sqlite3" (driver banco de dados sqlite) 
       yarn add sqlite3
 
+- Criação de uma CLI (Command Line Interface)
+      *** A criação da CLI tem por objetivo facilitar o trabalho com as "migration" ***
+      Adicionar no arquivo "package.json" o script chamando a CLI dentro do express
+            "typeorm": "ts-node-dev node_modules/typeorm/cli.js"
+
+           //Exemplo:
+            "scripts": {
+            "dev": "ts-node-dev --transpile-only --ignore-watch node_modules src/server.ts",
+             "typeorm": "ts-node-dev node_modules/typeorm/cli.js"
+            }
+
+      Configurar localização da pasta onde serão criadas as "migrations" no "ormconfig.json"      
+            {
+                  "type": "sqlite",
+                  "database": "./src/database/database.sqlite",
+                        
+                  "cli":{
+                        "migrationsDir": "./src/database/migrations"
+                  }     
+            }
+
+      Testar Configuração:
+            yarn typeorm
+      Testar funcionalidade ao gerar "migration":
+            yarn typeorm migration:create -n CreateUsers
+
+
+      
+
+
