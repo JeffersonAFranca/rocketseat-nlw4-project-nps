@@ -128,6 +128,8 @@ AULA 2  - Preparação do ambiente para acesso ao banco de dados
       Testar funcionalidade ao gerar "migration":
             yarn typeorm migration:create -n CreateUsers
 
+- Instalação Beekeeper Studio - Gerenciador de Banco de Dados
+      
 
       
 
