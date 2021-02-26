@@ -1,32 +1,59 @@
-Instalados em outros projetos 
+Ambiente VsCode (Extensões instaladas)
+
+-Settings Sync (sincronizar configurações VSCode no GitHub)
+      -Dracula Official (Tema)
+      -TabNine Autocomplete
+      -Prettier Code Formatter
+      -Bracket Pair Colorizer
+      -Material Icon Theme
+      -HTML Preview
+      -LiveServer  
+      -Node.js exec
+      -Debugguer for Chrome
+------------------------------------------------------------------------
+
+Já Instalados em projetos anterios
 - Git Bash version - 2.30.0.windows.2
 - Node.js  version - v14.16.0.windows
-
-Instalados Projeto-NPS
+------------------------------------------------------------------------
+Instalados Projeto-NPS 
 - Yarn       version - 1.22.5  (gerenciador de pacotes) Windows
   PowerShell: cinst yarn
   E escolha a opção `[A]ll - yes to all`.
 
 - Chocolatey version - 0.10.15 (gerenciador de dependencias) Windows
+- Insomnia.Designer-2020.5.2 (Aplicativo utilizado para interção com APi baseadas no protocolo HTTP )
+
+-----------------------------------------------------------------
+AULA 1  - Preparação do Ambiente 
+(Instalação do Framwork Express, dependencias e Configuração do Servidor)
+-----------------------------------------------------------------
+
+Instalados Projeto-NPS 
+- Yarn       version - 1.22.5   (gerenciador de pacotes) Windows
+- Chocolatey version - 0.10.15  (gerenciador de dependencias) Windows
+- Insomnia.Designer  - 2020.5.2 (Aplicativo utilizado para interção com APi baseadas no protocolo HTTP )
 
 
-
-Aula 1 #################################################################################################
+!!!IMPORTANTE APOS A INSTALACAO DOS PACOTES VERIFICAR SE ELES FORAM
+ADICIONADOS NO package.json!!!!
 
  - Acessar a pasta raiz do projeto nlw/api
  - Inicializar o projeto  
     Terminal: yarn init -y 
-        Será criado um arquivo package.json (arquivo que será utilizado para armazenar
-        parametros do projeto (Dependências) )
+        Será criado um arquivo package.json (arquivo que será utilizado 
+        para armazenar parametros do projeto (Dependências) )
 
- - Instalar dependência "Express" ( Framework para otimizar a construção de aplicações web e API's)
-    Terminal: yarn add express 
-     Será criado uma pasta nwl/api/node_modules 
+ - Instalar dependência "Express" ( Framework para otimizar a construção de
+   aplicações web e API's)
+   Terminal: yarn add express 
+    Será criado uma pasta nwl/api/node_modules 
 
  - Instalar dependência de tipagem de dados no express
     yarn add @types/express -D //Instalar como dependência de desenvolvimento
 
-- Instalar typescript como dependência para que o node consiga interpretar sintaxes em typescript.
+- Instalar typescript como dependência para que o node consiga interpretar.
+sintaxes em typescript.
       yarn add typescript -D
       Inicializar typescript
       yarn tsc --init // será criado um arquivo tsconfig.json (no arquivo criado alterar "strict": false,)  
@@ -34,56 +61,34 @@ Aula 1 #########################################################################
 - Instalar dependência "ts-node-dev" compila o arquivo .ts e reinicia o projeto (semelhante ao NODEMON)
       yarn add ts-node-dev -D
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-Plugins Instalados:
-
-TabNine
-Prettier Code Formatter
-Bracket Pair Colorizer
-Material Icon Theme
-
-
-
-
-https://lab.hostgator.com.br/hc/pt-br/community/posts/360043904534-Deploy-NodeJS-em-ambiente-Dedicado-ou-VPS
-// Criar app.js para testar servidor
-
-const http = require('http')
-const hostname = '127.0.0.1';
-const port = 5000;
-
-const server = http.createServer((req, res) => {
-res.statusCode = 200;
-res.setHeader('Content-Type', 'text/plain');
-res.end('Hello World! NodeJS \n');
-});
-
-server.listen(port, hostname, () => {
-console.log(`Server running at http://${hostname}:${port}/`);
-});
-
-
 // FIM
 
-Teste a execução do app com o node, executando a linha de comando abaixo:
 
-/opt/cpanel/ea-nodejs10/bin/node app.js
-Se tudo ocorreu bem até aqui você deverá visualizar a seguinte mensagem:
 
-Server running at http://127.0.0.1:5000/
+Testando Servidor: 
+      - criar um arquivo "server.ts" dentro da pasta do projeto e adicionar os códigos abaixo:
+            /*
+            import express from 'express';
 
-//FIM
+            const app = express();
 
-       
+            app.get("/", (request, response) =>{
+            return response("Hello Word!!!)
+            })
+
+            // Iniciando Servidor
+            app.listen(3333, () => console.log('Server is running') );
+            */
+
+      - criar ou alterar o script no arquivo package.json:
+           /*
+            "scripts": {
+            "dev": "ts-node-dev --transpile-only --ignore-watch node_modules src/server.ts"
+            }
+           */
+      -No Terminal executar: yarn dev   //Para iniciar o servidor 
+
+
+-----------------------------------------------------------------
+AULA 2 
+-----------------------------------------------------------------
