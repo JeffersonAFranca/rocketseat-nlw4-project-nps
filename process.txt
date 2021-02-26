@@ -26,7 +26,7 @@ Instalados Projeto-NPS
 
 -----------------------------------------------------------------
 AULA 1  - Preparação do Ambiente 
-(Instalação do Framwork Express, dependencias e Configuração do Servidor)
+(Instalação do Framwork Express dependencias e Configuração do Servidor)
 -----------------------------------------------------------------
 
 Instalados Projeto-NPS 
@@ -38,27 +38,27 @@ Instalados Projeto-NPS
 !!!IMPORTANTE APOS A INSTALACAO DOS PACOTES VERIFICAR SE ELES FORAM
 ADICIONADOS NO package.json!!!!
 
- - Acessar a pasta raiz do projeto nlw/api
- - Inicializar o projeto  
-    Terminal: yarn init -y 
-        Será criado um arquivo package.json (arquivo que será utilizado 
-        para armazenar parametros do projeto (Dependências) )
+- Acessar a pasta raiz do projeto nlw/api
+- Inicializar o projeto  
+   Terminal: yarn init -y 
+      Será criado um arquivo package.json (arquivo que será utilizado 
+      para armazenar parametros do projeto (Dependências) )
 
- - Instalar dependência "Express" ( Framework para otimizar a construção de
-   aplicações web e API's)
-   Terminal: yarn add express 
-    Será criado uma pasta nwl/api/node_modules 
+- Instalar dependência "Express" ( Framework para otimizar a construção de
+  aplicações web e API's)
+  Terminal: yarn add express 
+   Será criado uma pasta nwl/api/node_modules 
 
- - Instalar dependência de tipagem de dados no express
-    yarn add @types/express -D //Instalar como dependência de desenvolvimento
+- Instalar devdependência "@types" de tipagem de dados no express
+   yarn add @types/express -D //Instalar como dependência de desenvolvimento
 
-- Instalar typescript como dependência para que o node consiga interpretar.
+- Instalar devdependência "typescript" como dependência para que o node consiga interpretar.
 sintaxes em typescript.
       yarn add typescript -D
       Inicializar typescript
       yarn tsc --init // será criado um arquivo tsconfig.json (no arquivo criado alterar "strict": false,)  
 
-- Instalar dependência "ts-node-dev" compila o arquivo .ts e reinicia o projeto (semelhante ao NODEMON)
+- Instalar devdependência "ts-node-dev" compila o arquivo .ts e reinicia o projeto (semelhante ao NODEMON)
       yarn add ts-node-dev -D
 
 // FIM
@@ -90,5 +90,10 @@ Testando Servidor:
 
 
 -----------------------------------------------------------------
-AULA 2 
+AULA 2  (Instalação de TypeORM(Object Relational Mapping) )
 -----------------------------------------------------------------
+
+- Instalação dependência "pg" (postgresql)
+      yarn add pg
+- Instalação devdependência "@types/pg" 
+      yarn add @types/pg -D 
