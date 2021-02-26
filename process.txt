@@ -25,6 +25,9 @@ Instalados Projeto-NPS
 - Insomnia.Designer-2020.5.2 (Aplicativo utilizado para interção com APi baseadas no protocolo HTTP )
 
 -----------------------------------------------------------------
+
+
+-----------------------------------------------------------------
 AULA 1  - Preparação do Ambiente 
 (Instalação do Framwork Express dependencias e Configuração do Servidor)
 -----------------------------------------------------------------
@@ -90,10 +93,12 @@ Testando Servidor:
 
 
 -----------------------------------------------------------------
-AULA 2  (Instalação de TypeORM(Object Relational Mapping) )
+AULA 2  - Preparação do ambiente para acesso ao banco de dados 
 -----------------------------------------------------------------
 
-- Instalação dependência "pg" (postgresql)
-      yarn add pg
-- Instalação devdependência "@types/pg" 
-      yarn add @types/pg -D 
+- Instalação TypeORM (Framework) ORM- Object Relational Mapping
+      Faz uma Ponte entre Orientação a Objetos e o Banco de Dados
+            yarn add typeorm reflect-metadata
+- Instalação dependencia "sqlite3" (driver banco de dados sqlite) 
+      yarn add sqlite3
+

@@ -1,6 +1,13 @@
+import 'reflect-metadata';
 import express from 'express';
-
 const app = express();
+
+
+//Importando arquivo de conexão com o database
+//Devido o arquivo de configuração estar nomeado como "index" , não é necessário informar o nome do arquivo. 
+import "./database";
+
+
 
 /*
 ROTAS: São recursos disponíveis dentro de uma API
