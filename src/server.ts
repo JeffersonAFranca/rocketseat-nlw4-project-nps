@@ -1,11 +1,33 @@
 import 'reflect-metadata';
 import express from 'express';
+import "./database"; //Importando arquivo de conexão com o database - Devido o arquivo de estar com nome "index" , não é necessário informar o nome do arquivo. 
+import { router } from "./routes";
+
 const app = express();
 
+app.use(express.json());
+app.use(router)
 
-//Importando arquivo de conexão com o database
-//Devido o arquivo de configuração estar nomeado como "index" , não é necessário informar o nome do arquivo. 
-import "./database";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Iniciando Servidor
+app.listen(3333, () => console.log('Server is running') );
+
+
+
 
 
 
@@ -34,15 +56,3 @@ METODOS: Alguns que poderão ser utilizados na API
             return response.send("Hello Word!!")
         Exemplo: http://localhost:3333/users
 */
-app.get("/", (request, response) =>{
-    return response.json({message: "Hello Word!!"})
-})
-
-app.post("/", (request, response) =>{
-    //Recebeu os dados para salvar
-    return response.json({message: "Os dados foram salvos com sucesso!"})
-})
-
-
- // Iniciando Servidor
-app.listen(3333, () => console.log('Server is running') );
