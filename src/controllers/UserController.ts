@@ -1,34 +1,12 @@
-import { Request, Response } from "express";
-import { getRepository     } from "typeorm";        // Função que possibilita a manipulação dos registro no banco de dados
-import { User              } from "../models/User"; // Importa o arquivo que contém a Entidade como class
+import {Request, Response} from 'express';
 
 class UserController {
     async create(request:Request, response:Response){
-        const { name , email } = request.body;
-        
-        const usersRepository = getRepository(User);  // User - Arquivo que contém a classe Entidade que representa a tabela "users"
-        
-        const userAlreadyExists = await usersRepository.findOne({
-            email
-        }) 
-        
-        if(userAlreadyExists) {
-            return response.status(400).json({
-               error: "User already exists!" 
-            })
-        }
+        const body = request.body;
 
-        const user = usersRepository.create({
-            name,
-            email,
-        });
-
-                   
-        await usersRepository.save(user);
-
-        return response.json(user);
+        console.log(body)
+        return response.send();
     }
-    
 }
 
 export { UserController }
