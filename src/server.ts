@@ -1,5 +1,5 @@
 import 'reflect-metadata';
-import express from 'express';
+import express, { request, response } from 'express';
 import "./database"; //Importando arquivo de conexão com o database - Devido o arquivo de estar com nome "index" , não é necessário informar o nome do arquivo. 
 import { router } from "./routes";
 
@@ -7,6 +7,7 @@ const app = express();
 
 app.use(express.json());
 app.use(router)
+
 
 
 
