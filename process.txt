@@ -61,6 +61,12 @@ sintaxes em typescript.
       Inicializar typescript
       yarn tsc --init // será criado um arquivo tsconfig.json (no arquivo criado alterar "strict": false,)  
 
+      Habilitar no arquivo "tsconfig.json" os parametros para habilitar o decorator:
+       "strictPropertyInitialization": false,
+       "emitDecoratorMetadata": true,
+       "experimentalDecorators": true, 
+
+
 - Instalar devdependência "ts-node-dev" compila o arquivo .ts e reinicia o projeto (semelhante ao NODEMON)
       yarn add ts-node-dev -D
 
@@ -129,7 +135,7 @@ AULA 2  - Preparação do ambiente para acesso ao banco de dados
             yarn typeorm migration:create -n CreateUsers
 
 - Instalação Beekeeper Studio - Gerenciador de Banco de Dados
-      
+- Instalação da dependência "@types/uuid"
 
       
 
