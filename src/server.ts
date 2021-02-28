@@ -1,10 +1,8 @@
 import 'reflect-metadata';
 import express, { request, response } from 'express';
-<<<<<<< HEAD
 import "./database";  //Importando arquivo de conexão com o database - Devido o arquivo de estar com nome "index" , não é necessário informar o nome do arquivo. 
-=======
 import "./database"; //Importando arquivo de conexão com o database - Devido o arquivo de estar com nome "index" , não é necessário informar o nome do arquivo. 
->>>>>>> 40bcebd85023127110c8f92bd18c1b81179ddbb3
+
 import { router } from "./routes";
 
 const app = express();
