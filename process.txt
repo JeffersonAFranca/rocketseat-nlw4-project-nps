@@ -137,6 +137,51 @@ AULA 2  - Preparação do ambiente para acesso ao banco de dados
 - Instalação Beekeeper Studio - Gerenciador de Banco de Dados
 - Instalação da dependência "@types/uuid"
 
+
+
+-----------------------------------------------------------------
+AULA 2  - Testes automatizados
+-----------------------------------------------------------------
+
+Instalação da devdependência "jest" e @types.
+      yarn add jest @types/jest -D
+      yarn jest --init
+Parametros iniciais de configuração jest
+√ Would you like to use Jest when running "test" script in "package.json"? ... yes
+√ Would you like to use Typescript for the configuration file? ... yes   
+√ Choose the test environment that will be used for testing » node       
+√ Do you want Jest to add coverage reports? ... no
+√ Which provider should be used to instrument code for coverage? » v8    
+√ Automatically clear mock calls and instances between every test? ... yes
+
+jest.config.ts
+
+      // Stop running tests after `n` failures
+      bail: true,
+      // The test environment that will be used for testing
+      //testEnvironment: "node",
+      // The glob patterns Jest uses to detect test files
+       testMatch: [ "**/__tests__/*.test.ts*" ],
+      // A preset that is used as a base for Jest's configuration
+       preset: "ts-jest",
+      Criado pasta __tests__ dentro de scr/
+
+Instalação de devdependência "ts-jest" (É um preset necesário para o funcionamento do Jest)
+yarn add ts-jest -D
+
+
+-Cria Migrations
+-Cria Models
+-Cria Repository
+-Cria Controller
+
+1- Testes unitarios
+2- Testes de Integração
+      ->router -> controller -> repository
+      <- repository -< controller <- response
+3- Ponta a Ponta (E2E)
+      
+
       
 
 
