@@ -164,11 +164,13 @@ jest.config.ts
        testMatch: [ "**/__tests__/*.test.ts*" ],
       // A preset that is used as a base for Jest's configuration
        preset: "ts-jest",
+      "types": ["@types/jest"], /* Type declaration files to be included in compilation. */
+
       Criado pasta __tests__ dentro de scr/
 
 Instalação de devdependência "ts-jest" (É um preset necesário para o funcionamento do Jest)
-yarn add ts-jest -D
-
+yarn add ts-jest @types/jest @types/mocha -D  
+ 
 
 -Cria Migrations
 -Cria Models
