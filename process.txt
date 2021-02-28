@@ -43,34 +43,28 @@ ADICIONADOS NO package.json!!!!
 
 - Acessar a pasta raiz do projeto nlw/api
 - Inicializar o projeto  
-   Terminal: yarn init -y 
-      Será criado um arquivo package.json (arquivo que será utilizado 
-      para armazenar parametros do projeto (Dependências) )
+   yarn init -y - Será criado um arquivo package.json 
+   (arquivo que será utilizado para declaração das Dependências/Parametros/Scripts
 
 - Instalar dependência "Express" ( Framework para otimizar a construção de
   aplicações web e API's)
-  Terminal: yarn add express 
-   Será criado uma pasta nwl/api/node_modules 
-
-- Instalar devdependência "@types" de tipagem de dados no express
-   yarn add @types/express -D //Instalar como dependência de desenvolvimento
+  yarn add express 
+  yarn add @types/express -D
 
 - Instalar devdependência "typescript" como dependência para que o node consiga interpretar.
 sintaxes em typescript.
       yarn add typescript -D
-      Inicializar typescript
-      yarn tsc --init // será criado um arquivo tsconfig.json (no arquivo criado alterar "strict": false,)  
+      yarn tsc --init // Incia Typescript será criado um arquivo tsconfig.json (no arquivo criado alterar "strict": false,)  
 
-      Habilitar no arquivo "tsconfig.json" os parametros para habilitar o decorator:
+      Habilitar e alterar parametros no arquivo "tsconfig.json".
+       "strict": false,
        "strictPropertyInitialization": false,
-       "emitDecoratorMetadata": true,
-       "experimentalDecorators": true, 
+       "emitDecoratorMetadata": true,           //Habilita decorators 
+       "experimentalDecorators": true,          //Habilita decorators 
 
 
-- Instalar devdependência "ts-node-dev" compila o arquivo .ts e reinicia o projeto (semelhante ao NODEMON)
+- Instalar devdependência "ts-node-dev" compilador para arquivos .ts 
       yarn add ts-node-dev -D
-
-// FIM
 
 
 
@@ -133,6 +127,8 @@ AULA 2  - Preparação do ambiente para acesso ao banco de dados
             yarn typeorm
       Testar funcionalidade ao gerar "migration":
             yarn typeorm migration:create -n CreateUsers
+      Exetutar migration:
+            yarn typeorm migration:run
 
 - Instalação Beekeeper Studio - Gerenciador de Banco de Dados
 - Instalação da dependência "@types/uuid"
@@ -169,7 +165,7 @@ jest.config.ts
       Criado pasta __tests__ dentro de scr/
 
 Instalação de devdependência "ts-jest" (É um preset necesário para o funcionamento do Jest)
-yarn add ts-jest @types/jest @types/mocha -D  
+yarn add ts-jest @types/jest -D  
  
 
 -Cria Migrations
