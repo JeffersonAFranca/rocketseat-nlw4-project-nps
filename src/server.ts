@@ -7,7 +7,7 @@ import { router } from "./routes";
 
 const app = express();
 
-app.use(express.json());
+app.use(express.json()); // Faz com que o express receba aquivos json
 app.use(router)
 
 

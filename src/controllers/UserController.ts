@@ -1,21 +1,21 @@
 import { Request, Response } from "express";
-import { getRepository     } from "typeorm";        // Função que possibilita a manipulação dos registro no banco de dados
-import { User              } from "../models/User"; // Importa o arquivo que contém a Entidade como class
+import { getCustomRepository } from "typeorm"; // Função que possibilita a manipulação dos registro no banco de dados
+import { UsersRepository } from "../repositories/UsersRepository";
 
 class UserController {
     async create(request:Request, response:Response){
         const { name , email } = request.body;
         
-        const usersRepository = getRepository(User);  // User - Arquivo que contém a classe Entidade que representa a tabela "users"
+        const usersRepository = getCustomRepository(UsersRepository)
         
         const userAlreadyExists = await usersRepository.findOne({
-            email
-        }) 
+            email,
+        });
         
         if(userAlreadyExists) {
             return response.status(400).json({
                error: "User already exists!" 
-            })
+            });
         }
 
         const user = usersRepository.create({
@@ -31,4 +31,4 @@ class UserController {
     
 }
 
-export { UserController }
+export { UserController };
