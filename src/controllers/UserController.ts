@@ -5,7 +5,6 @@ import { UsersRepository } from "../repositories/UsersRepository";
 class UserController {
     async create(request:Request, response:Response){
         const { name , email } = request.body;
-        
         const usersRepository = getCustomRepository(UsersRepository)
         
         const userAlreadyExists = await usersRepository.findOne({
@@ -22,13 +21,9 @@ class UserController {
             name,
             email,
         });
-
                    
         await usersRepository.save(user);
-
         return response.status(201).json(user);
-    }
-    
+    }   
 }
-
 export { UserController };
