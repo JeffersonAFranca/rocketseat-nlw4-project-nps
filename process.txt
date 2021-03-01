@@ -59,9 +59,9 @@ sintaxes em typescript.
       Habilitar e alterar parametros no arquivo "tsconfig.json".
        "strict": false,
        "strictPropertyInitialization": false,
-       "emitDecoratorMetadata": true,           //Habilita decorators 
-       "experimentalDecorators": true,          //Habilita decorators 
-
+       "emitDecoratorMetadata": true,         //Habilita decorators 
+       "experimentalDecorators": true,        //Habilita decorators 
+       "lib": [ "es2015" ],                   /* Specify library files to be included in the compilation. */
 
 - Instalar devdependência "ts-node-dev" compilador para arquivos .ts 
       yarn add ts-node-dev -D

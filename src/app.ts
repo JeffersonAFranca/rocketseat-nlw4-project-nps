@@ -1,6 +1,7 @@
 import 'reflect-metadata';
 import express, { request, response } from 'express';
-import createConnection from "./database";  //Importando arquivo de conexão com o database - Devido o arquivo de estar com nome "index" , não é necessário informar o nome do arquivo. 
+import createConnection from './database'; 
+
 
 
 import { router } from "./routes";
