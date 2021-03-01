@@ -108,10 +108,12 @@ AULA 2  - Preparação do ambiente para acesso ao banco de dados
             "typeorm": "ts-node-dev node_modules/typeorm/cli.js"
 
            //Exemplo:
-            "scripts": {
-            "dev": "ts-node-dev --transpile-only --ignore-watch node_modules src/server.ts",
-             "typeorm": "ts-node-dev node_modules/typeorm/cli.js"
-            }
+           "scripts": {
+              "gitupd": "git push -u origin master",
+              "dev": "ts-node-dev --transpile-only --ignore-watch node_modules src/server.ts",
+              "typeorm": "ts-node-dev node_modules/typeorm/cli.js",
+              "test": "cross-env NODE_ENV=test jest"
+             },
 
       Configurar localização da pasta onde serão criadas as "migrations" no "ormconfig.json"      
             {
@@ -164,9 +166,12 @@ jest.config.ts
 
       Criado pasta __tests__ dentro de scr/
 
-Instalação de devdependência "ts-jest" (É um preset necesário para o funcionamento do Jest)
-yarn add ts-jest @types/jest -D  
- 
+- Instalação de devdependência "ts-jest" (É um preset necesário para o funcionamento do Jest)
+      yarn add ts-jest @types/jest -D  
+-Instalação devdependência "supertest" (Simulador de servidor iniciado)
+      yarn add supertest @types/supertest -D
+-Instalação devdependência "cross-env" (Trabalhar com variáveis de ambiente)
+      yarn add cross-env -D   
 
 -Cria Migrations
 -Cria Models
