@@ -5,8 +5,6 @@ app.listen(3333, () => console.log('Server is running') );
 
 
 
-
-
 /*
 ROTAS: São recursos disponíveis dentro de uma API
 Parâmetros de uma rota (request, response)  

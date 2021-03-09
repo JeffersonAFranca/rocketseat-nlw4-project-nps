@@ -1,8 +1,11 @@
 
-import { Router }              from 'express';
-import { SurveyController }   from './controllers/SurveysController';
-import { UserController }     from "./controllers/UserController";
+import { Router }             from 'express'                         ;
+import { SurveyController }   from './controllers/SurveysController' ;
+import { UserController }     from "./controllers/UserController"    ;
 import { SendMailController } from "./controllers/SendMailController"; 
+
+
+
 
 const router = Router()
 
@@ -15,5 +18,14 @@ router.post("/users"   , userController.create     );
 router.post("/surveys" , surveyController.create   );
 router.get("/surveys"  , surveyController.show     );
 router.post("/sendmail", sendMailController.execute);
+
+
+
+router.get("/cdf",(Request, Response) =>{
+    return Response.send(__dirname + 'cdf.ts')
+
+}  )
+
+
 
 export { router }
