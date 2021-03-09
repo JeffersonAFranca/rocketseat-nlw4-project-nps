@@ -138,7 +138,7 @@ AULA 2  - Preparação do ambiente para acesso ao banco de dados
 
 
 -----------------------------------------------------------------
-AULA 2  - Testes automatizados
+AULA 3  - Testes automatizados
 -----------------------------------------------------------------
 
 Instalação da devdependência "jest" e @types.
@@ -172,6 +172,24 @@ jest.config.ts
       yarn add supertest @types/supertest -D
 -Instalação devdependência "cross-env" (Trabalhar com variáveis de ambiente)
       yarn add cross-env -D   
+
+
+-----------------------------------------------------------------
+AULA 4  - Envio de E-mails
+-----------------------------------------------------------------
+
+Instalação dependência "nodemailer" (Biblioteca Utilizada para envio de e-mail)
+Instalação devdependência  "@types/nodemailer"
+
+Parametros de configuração direcionados para Servidor de email fake "Ethereal"
+ 
+
+
+
+
+
+
+
 
 -Cria Migrations
 -Cria Models
